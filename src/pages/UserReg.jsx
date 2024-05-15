@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Inputs from '../components/Inputs';
+import Buttons from '../components/Buttons';
 
 export default function UserReg() {
     // const [name, setName] = useState('Shibin');
@@ -23,6 +24,9 @@ export default function UserReg() {
     const alertplace = () => {
         console.log('my place', ":", placeRef.current.value);
     }
+    const showUserData = () => {
+        console.log(userData);
+    }
     return (
         <div>
             <h2>User Reg</h2>
@@ -44,6 +48,9 @@ export default function UserReg() {
                 <Inputs type='text' defaultValue={userData.place} ref={placeRef} /></label>
             <button onClick={() => alertplace()}>Alert place</button>
             {/* <Mybutton name={"save"} color={0}/> */}
+            <Buttons userdata={showUserData} data={{
+                showUserData, user:userData
+            }} />
         </div>
     )
 }
