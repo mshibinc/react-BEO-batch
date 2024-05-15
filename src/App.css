@@ -37,7 +37,24 @@
     }
 }
 
-.nav ol {
+.nav a {
+    margin: 10px;
+}
+
+.blog-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #282c34;
+    margin: 10px;
     padding: 20px;
-    background-color: #282c34;
+    width: 20%;
 }
