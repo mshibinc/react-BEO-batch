@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function BlogCard() {
+export default function BlogCard({data}) {
   return (
     <div className='blog-card'>
-        <h4>Title</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque harum dolorum pariatur perferendis molestias nemo possimus non vitae corporis aspernatur officiis, asperiores ex doloribus ratione fugit architecto natus in inventore.</p>
+        <h4>{data.title}</h4>
+        <p>{data.blog}</p>
+        <Link to={`/blog-details/${data.id}`}>Read more</Link>
     </div>
   )
 }
