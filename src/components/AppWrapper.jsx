@@ -7,7 +7,7 @@ export default function AppWrapper() {
                 <Link to="/">Home</Link>
                 <Link to="about">About</Link>
                 <Link to="contact">Contact</Link>
-                <Link to="blog">blog</Link>
+                <Link to="blog">Blog</Link>
             </div>
             <Outlet />
             <footer className='footer'>
