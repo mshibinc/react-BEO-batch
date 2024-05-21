@@ -1,12 +1,12 @@
 import React, { useState,useId } from 'react'
-
+import { v4 as uuidv4 } from 'uuid';
 export default function TodoForm() {
   const [todo,setTodo]=useState('');
   const tempId=useId();
   const addTodo =(e)=>{
     let oldStorage =localStorage.getItem('todo');
     let newTodo ={
-      id:tempId,
+      id:uuidv4(),
       task:todo
     }
     if(oldStorage==null){
