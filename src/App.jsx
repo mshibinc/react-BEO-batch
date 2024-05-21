@@ -9,6 +9,8 @@ import "./App.css";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
 import AppWrapper from "./components/AppWrapper";
+import TodoList from "./pages/Todo/TodoList";
+import TodoForm from "./pages/Todo/TodoForm";
 function App() {
   return (<>
     {/* <UserReg /> */}
@@ -21,6 +23,9 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog-details/:id" element={<BlogDetails />} />
+          <Route path="todo" element={<TodoList />} />
+          <Route path="add-todo" element={<TodoForm />} />
+
           {/* <Route path="blog-details/:id/:type" element={<BlogDetails />} /> */}
         </Route>
       </Routes>

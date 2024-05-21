@@ -8,6 +8,8 @@ export default function AppWrapper() {
                 <Link to="about">About</Link>
                 <Link to="contact">Contact</Link>
                 <Link to="blog">Blog</Link>
+                <Link to="todo">ToDo</Link>
+
             </div>
             <Outlet />
             <footer className='footer'>
