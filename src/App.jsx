@@ -24,7 +24,7 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog-details/:id" element={<BlogDetails />} />
           <Route path="todo" element={<TodoList />} />
-          <Route path="add-todo" element={<TodoForm />} />
+          {/* <Route path="add-todo" element={<TodoForm />} /> */}
 
           {/* <Route path="blog-details/:id/:type" element={<BlogDetails />} /> */}
         </Route>

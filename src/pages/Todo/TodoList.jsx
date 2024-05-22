@@ -4,6 +4,7 @@ import TodoForm from './TodoForm'
 
 export default function TodoList() {
     const [allTodo, setAllTodo] = useState([])
+    const [todoUpdate, setTodoUpdate] = useState(null)
     const [triggerTodo, setTriggerTodo] = useState(true)
     useEffect(() => {
         getdata()
@@ -20,14 +21,14 @@ export default function TodoList() {
     }
     return (
         <div>
-            <TodoForm tiggerAction={tiggerAction} />
+            <TodoForm tiggerAction={tiggerAction} todoUpdate={todoUpdate} setTodoUpdate={setTodoUpdate}/>
             <table>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Task</th>
                         <th>Action
-                            <Link to="/add-todo"><button>Add</button></Link>
+                            {/* <Link to="/add-todo"><button>Add</button></Link> */}
                         </th>
                     </tr>
                 </thead>
@@ -38,7 +39,7 @@ export default function TodoList() {
                             <td>{itm.task}</td>
                             <td>
                                 <button>View</button>
-                                <button>Edit</button>
+                                <button onClick={()=>setTodoUpdate(itm)}>Edit</button>
                                 <button>Delete</button>
                             </td>
                         </tr>
