@@ -9,6 +9,7 @@ export default function AppWrapper() {
                 <Link to="contact">Contact</Link>
                 <Link to="blog">Blog</Link>
                 <Link to="todo">ToDo</Link>
+                <Link to="users">Users</Link>
 
             </div>
             <Outlet />

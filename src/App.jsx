@@ -11,6 +11,7 @@ import BlogDetails from "./pages/BlogDetails";
 import AppWrapper from "./components/AppWrapper";
 import TodoList from "./pages/Todo/TodoList";
 import TodoForm from "./pages/Todo/TodoForm";
+import Users from "./pages/Users";
 function App() {
   return (<>
     {/* <UserReg /> */}
@@ -24,6 +25,7 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog-details/:id" element={<BlogDetails />} />
           <Route path="todo" element={<TodoList />} />
+          <Route path="users" element={<Users />} />
           {/* <Route path="add-todo" element={<TodoForm />} /> */}
 
           {/* <Route path="blog-details/:id/:type" element={<BlogDetails />} /> */}

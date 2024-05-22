@@ -19,6 +19,20 @@ export default function TodoList() {
     const tiggerAction = () => {
         setTriggerTodo(!triggerTodo)
     }
+    const deleteTodo =(tId)=>{
+        let oldStorage = localStorage.getItem('todo');
+        localStorage.removeItem('todo');
+        let parsedTodo = JSON.parse(oldStorage);
+        let toUpdate =parsedTodo.filter(itm=>itm.id!=tId);
+        localStorage.setItem('todo', JSON.stringify(toUpdate));
+        getdata()
+    }
+    const clearAll=()=>{
+        // let oldStorage = localStorage.getItem('todo');
+        localStorage.removeItem('todo');
+        localStorage.setItem('todo', JSON.stringify([]));
+        getdata()
+    }
     return (
         <div>
             <TodoForm tiggerAction={tiggerAction} todoUpdate={todoUpdate} setTodoUpdate={setTodoUpdate}/>
@@ -28,7 +42,7 @@ export default function TodoList() {
                         <th>#</th>
                         <th>Task</th>
                         <th>Action
-                            {/* <Link to="/add-todo"><button>Add</button></Link> */}
+                        <button onClick={clearAll}>Clear all</button>
                         </th>
                     </tr>
                 </thead>
@@ -40,7 +54,7 @@ export default function TodoList() {
                             <td>
                                 <button>View</button>
                                 <button onClick={()=>setTodoUpdate(itm)}>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={()=>deleteTodo(itm.id)}>Delete</button>
                             </td>
                         </tr>
                     ))}
