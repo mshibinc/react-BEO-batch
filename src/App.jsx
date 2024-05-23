@@ -12,8 +12,10 @@ import AppWrapper from "./components/AppWrapper";
 import TodoList from "./pages/Todo/TodoList";
 import TodoForm from "./pages/Todo/TodoForm";
 import Users from "./pages/Users";
+import { store } from "./redux/store";
+import { Provider } from "react-redux"
 function App() {
-  return (<>
+  return (<Provider store={store}>
     {/* <UserReg /> */}
     {/* <UserList /> */}
     <BrowserRouter>
@@ -32,6 +34,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  </>)
+  </Provider>)
 }
 export default App;
