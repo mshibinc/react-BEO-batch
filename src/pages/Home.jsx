@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 export default function Home() {
   const { users } = useSelector((state) => state.user);
-  console.log(users, "----usersusersusers");
+  // console.log(users, "----usersusersusers");
   return (
     <div>Home
 
